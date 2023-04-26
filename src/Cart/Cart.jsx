@@ -7,7 +7,7 @@ export default class Cart extends Component {
         return cart.map((item,index)=>{
             return (<tr key={index}>
                 <td style={{lineHeight:'70px'}}>{item.id}</td>
-                <td style={{lineHeight:'70px'}}><img src={item.image} width={70} height={70} /></td>
+                <td style={{lineHeight:'70px'}}><img src={item.image} alt='' width={70} height={70} /></td>
                 <td style={{lineHeight:'70px'}}>{item.name}</td>
                 <td style={{lineHeight:'70px'}}> <button className='btn btn-primary w-38 h-38' onClick={()=>{quantityChange(item.id,true)}}>+</button> {item.num} <button className='btn btn-primary w-38 h-38' id='minus' onClick={()=>{quantityChange(item.id,false)}}>-</button> </td>
                 <td style={{lineHeight:'70px'}}>{item.price}$</td>
